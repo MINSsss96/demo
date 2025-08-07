@@ -10,39 +10,39 @@ public class LinkTestController {
 
 
     @GetMapping("/list")
-private String list_all(){
+public String list_all(){
 
 
         return "articles/list_all";
     }
 //    @GetMapping("/{id}")
-//    private String list_one(){
+//    public String list_one(){
 //
 //        return "/6list_one";
 //    }
 //    @GetMapping("/create")
-//   private String Create(){
+//   public String Create(){
 //        return "/new";
 //    }
 //
 //    @GetMapping("/update")
-//    private String update_ok(){
+//    public String update_ok(){
 //        return "/update_ok";
 //    }
 //    @GetMapping("/{id}/update")
-//    private String update(){
+//    public String update(){
 //        return "/update";
 //    }
 //    @GetMapping("/{id}/delete")
-//    private String delete_ok(){
+//    public String delete_ok(){
 //        return "/delete_ok";
 //    }
 //    @GetMapping("{id}/articleComment}")
-//    private String comment_view(){
+//    public String comment_view(){
 //        return "/comment_view";
 //    }
 //    @GetMapping("{id}/articleComments/{article-comment-id}/delete}")
-//    private String delete_comment_ok(){
+//    public String delete_comment_ok(){
 //        return "/delete_comment_ok";
 //    }
 }
