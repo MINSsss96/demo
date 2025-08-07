@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<h3>mainPage</h3>
+<ul>
+    <li><a href="/gugu">문제1번</a></li>
+</ul>
+<ul>
+    <li><a href="/itemlist">문제2번</a></li>
+</ul>
+<hr>
+<ul>
+    <h2>문제3번</h2>
+    <li><a th:href="@{/articles/list}">list_all</a></li>
+    <li><a href="/articles/list_one">list_one</a></li>
+    <li><a href="/articles/new">new</a></li>
+    <li><a href="/articles/update_ok">update_ok</a></li>
+    <li><a href="/articles/update">update</a></li>
+    <li><a href="/articles/delete_ok">delete_ok</a></li>
+    <li><a href="/articles/comment_view">comment_view</a></li>
+    <li><a href="/articles/delete_ok">delete_ok</a></li>
 
+</ul>
 </body>
 </html>

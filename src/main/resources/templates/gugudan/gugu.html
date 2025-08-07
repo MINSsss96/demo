@@ -10,13 +10,13 @@
 <table>
     <thead>
     <tr>
-        <th></th>
+        <th style></th>
         <th th:each="dan : ${danList}" th:text="${dan} + '단'"></th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="num : ${numList}">
-        <th></th>
+        <th style="padding-left: 30px; padding-right: 30px;"></th>
         <td th:each="dan : ${danList}" th:text="${dan} + ' x ' + ${num} + ' = ' + ${dan * num}"></td>
     </tr>
     </tbody>
