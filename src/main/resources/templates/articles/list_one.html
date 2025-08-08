@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<h3>7번 게시글 읽어오기 성공</h3>
-<li><a th:href="/main">돌아가기</a></li>
+<h3 th:text="@{/articles/{id}(id=${someId})}"></h3>
+
 </body>
 </html>
