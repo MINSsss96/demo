@@ -5,10 +5,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/articles")
 public class LinkTestController {
+    @GetMapping({"/main", "/"})
+    public String mainPage() {
+        return "/articles/main";
+    }
 
 
     @GetMapping("/list")
@@ -18,14 +23,23 @@ public String list_all(){
 
     @GetMapping("/{id}")
     public String list_one(@PathVariable("id") int id, Model model) {
-        model.addAttribute("someId", 7);
-        model.addAttribute("list_one", id + "번 게시글 읽어오기 성공");
-        return "articles/list_one";
+        String msg = id + "번 게시글 읽어오기 성공";
+        model.addAttribute("msg", msg);
+        return "/articles/list_one";
     }
 
+
     @GetMapping("/create")
-   public String Create(){
-        return "/articles/new";
+    public String Create(@RequestParam("name") String name, @RequestParam("weight") int weight,@RequestParam("height") int height, Model model
+    ) {
+        String msg =  name + "의 키는 " + height + ", 몸무게는" + weight + "입니다.";
+        model.addAttribute("name", name);
+        model.addAttribute("weight", weight);
+        model.addAttribute("height", height);
+        model.addAttribute("msg", msg);
+
+        return "/articles/list_one";
+
     }
 
     @GetMapping("/update")

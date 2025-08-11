@@ -43,10 +43,10 @@
             <td>전체 게시글 읽기 성공</td>
             <td>list_all.html</td>
         </tr>
-        <tr>
+        <tr th:with="id=7, name='tom'">
             <td>url</td>
             <td>GET</td>
-            <td>7번 게시글 읽어오기 성공</td>
+            <td><a th:href="@{|/articles/${id}|}">[[${id}]]번 게시글 읽기 성공</a></td>
             <td>list_one.html</td>
         </tr>
         <tr>
